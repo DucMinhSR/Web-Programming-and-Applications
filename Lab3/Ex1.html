@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+    form{
+        max-width: 400px;
+        margin: auto;
+    }
+</style>
+<div class="container">
+
+    <form onsubmit="submitHandle(event)" action="/action_page.php" novalidate>
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+        </div>
+        <div id="err" style="color: red"></div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <script>
+        function ValidateEmail(mail) 
+        {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+            {
+                return true
+            }
+            return false
+        }
+        function submitHandle(event) {
+            const email = document.getElementById("email");
+            const password = document.getElementById("pwd");
+
+            const emailVal = email.value;
+            const passwordVal = password.value;
+
+
+            if(emailVal=="" || passwordVal=="" || !ValidateEmail(emailVal) || passwordVal.length <=6){
+                event.preventDefault();
+                const err = document.getElementById("err");
+                
+                if(emailVal==""){
+                    err.innerHTML = "Please enter your email.";
+                }
+                else if(passwordVal==""){
+                    err.innerHTML = "Please enter your password.";
+                }
+                else if(!ValidateEmail(emailVal)){
+                    err.innerHTML = "Your email is not correct";
+                }
+                else if(passwordVal.length <=6){
+                    err.innerHTML= "Your password must contain at least 6 characters";
+                }
+            }
+        }
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+.box-circle{
+     width: 500px;
+     height: 500px;
+     border: 5px solid ;
+     border-radius: 50%;
+     position: relative;
+     margin: 0 auto;
+     
+}
+.box-circle .number{
+     --rotate: 0;
+     position: absolute;
+     text-align: center;
+     width: 100%;
+     height: 100%;
+     transform: rotate(var(--rotate));
+     font-size: 32px;
+
+}
+.box-circle .banner{
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 2rem;
+     letter-spacing: 2px;
+     font-weight:   400;
+}
+.box-circle .time {
+     position: absolute;
+     left: 50%;
+     bottom: calc(50% - 100px);
+     transform: translate(-50%, -50%);
+     display: inline-block;
+     padding: 5px 15px;
+     font-size: 1.2rem;
+     font-weight: bold;
+}
+.box-circle .date {
+     position: absolute;
+     bottom: calc(50% - 150px);
+     left: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 1.5rem;
+     font-weight: bold;
+ }

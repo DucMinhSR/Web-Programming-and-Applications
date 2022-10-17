@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Exercise3</title>
+     <style>
+          *{
+     margin:0;
+}
+.banner{
+     width: 100%;
+     height: 200px;
+     background-color: rgba(34, 0, 255, 0.877);
+}
+.left{
+     float: left;
+     height: 100%;
+     width: 20%;
+     padding-top: 5px;
+}
+.center{
+     float: left;
+     height: 100%;
+     width: 50%;
+}
+.right{
+     float: left;
+     height: 100%;
+     width: 30%;
+}
+#image1{
+     width: 80%;
+     height: 100%;
+}
+#image2{
+     width: 90%;
+     height: 100%;
+}
+#image3{
+     width: 80%;
+     height: 100%;
+     margin: 5px 0;
+}
+.title{
+     clear: both;
+     background-color: white;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bolder;
+     color: rgba(238, 255, 0, 0.879);
+     height: 30px;
+     padding: 20px 0 10px 0;
+}
+#table{
+     width:100%;
+     height: 500px;
+}
+.o{
+     border: 1px solid black;
+}
+#bang td{
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bolder;
+}
+th, td {
+     padding: 10px;
+   }
+table {
+     border-spacing: 0px;
+     width:100%;
+}
+.red{
+     color: red;
+}
+.blueback{
+     background-color: rgb(34, 0, 255);
+}
+.orangeback{
+     color: orange;
+     background-color: rgba(0, 200, 255, 0.92);
+}
+     </style>     
+</head>
+<body >
+     <div class="banner" >
+          <div class="left">
+               <img id="image1" src="./images/h12.GIF" alt="">
+          </div>
+          <div class="center">
+               <img id="image2" src="./images/h14..GIF" alt="">
+          </div>
+          <div class="right">
+               <img id="image3" src="./images/h13.GIF" alt="">
+          </div>
+     </div>
+     <div class="title">Lịch Trình Các Chuyến Bay</div>
+     <div id="table">
+          <table id="bang">
+               <tr>
+                    <td rowspan="2"  class="o blueback">Thời gian</td>
+                    <td colspan="2" class="o blueback">Tuyến</td>
+               </tr>
+               <tr>
+                    <td class="o orangeback">Nơi đi</td>
+                    <td class="o orangeback">Nơi đến</td>
+               </tr>
+               <tr>
+                    <td rowspan="2" class="o red" >Sáng</td>
+                    <td class="o" >TP Hồ Chí Minh</td>
+                    <td class="o" >Hà Nội</td>
+               </tr>
+               <tr>
+                    <td class="o" >TP Hồ Chí Minh</td>
+                    <td class="o" >Singapore</td>
+               </tr>
+               <tr>
+                    <td rowspan="2" class="o red" >Chiều</td>
+                    <td class="o" >Hà Nội</td>
+                    <td class="o" >NewYork</td>
+               </tr>
+               <tr>
+                    <td class="o" >TP Hồ Chí Minh</td>
+                    <td class="o" >Phú Quốc</td>
+               </tr>
+          </table>
+     </div>   
+
+</body>
+</html>

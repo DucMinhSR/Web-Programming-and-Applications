@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Exercise4</title>
+     <style>
+        * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    margin: 0;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+row {
+    margin-left: -10px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+#headli{
+    margin-top: 10px;
+}
+#titleQuestion{
+    margin-top: 10px;
+}
+.header {
+    background-color: #A020F0;
+    height: 160px;
+    font-size: 60px;
+    font-weight : border;
+    padding: 50px 0;
+
+}
+
+.text-header {
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    color: white;
+    margin-left: -30px;
+    list-style: none;
+    background-color:#66CCFF;
+    margin-bottom: 5px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color:#6495ED;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    font-size: xx-small;
+    color: white;
+}
+
+.col-3 {
+    margin-left: -15px;
+    margin-top: -20px;
+}
+
+.col-6 h1 {
+    font-size: x-large;
+}
+
+.col-6 p {
+    font-size: x-small;
+}
+
+.aside  {
+    color: white;
+    background-color:#66CCFF;
+    text-align: center;
+}
+
+.aside h2 {
+    font-size: medium;
+}
+
+.aside p {
+    font-size: x-small;
+}
+
+.col-3 {
+    margin-bottom: -20px;
+}
+#titleQuestion{
+    height: 360px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.space{
+    height: 80px;
+    padding: 30px 0;
+    padding-bottom: 0;
+}
+.spacep{
+    height: 40px;
+    font-size: 20px;
+    padding-top:0;
+}
+     </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Chania</h1>
+</div>
+
+<div class="row">
+
+    <div class="col-3 menu">
+        <ul>
+            <li id="headli">The Flight</li>
+            <li>The City</li>
+            <li>The Island</li>
+            <li>The Food</li>
+        </ul>
+    </div>
+
+    <div class="col-6">
+        <h1>The City</h1>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    </div>
+
+    <div class="col-3 right">
+        <div id="titleQuestion"class="aside">
+            <div >What?</div>
+            <div class="spacep">Chania is a city on the island of Crete.</div>
+            <div class="space">Where?</div>
+            <div class="spacep">Crete is a Greek island in the Mediterranean Sea.</div>
+            <div class="space">How?</div>
+            <div class="spacep">You can reach Chania airport from all over Europe.</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+</html>

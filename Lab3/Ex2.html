@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<style>
+    .container{
+        max-width: 600px;
+    }
+    td, th {
+        width : 500px;
+        height: 50px;
+    }
+</style>
+
+<div class="container">
+    <h2>Add student</h2>
+    <form action="/action_page.php" >
+
+        <div class="form-group">
+            <label for="firstname">First name:</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last name:</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname">
+        </div>
+
+        <div class="form-group ">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <button type="button" class="btn btn-default" onclick="myFunction()">Add</button>
+
+        <table id ="table">
+            <thead>
+                <tr style="font-weight: bold;text-align:left;">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Delete</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <script>
+            function myFunction(event){
+                const firstnameVal = document.getElementById("firstname").value;
+                const lastnameVal = document.getElementById("lastname").value;
+                const emailVal = document.getElementById("email").value;
+
+                const table = document.getElementById("table");
+                const row = table.insertRow(1);
+                const first = row.insertCell(0);
+                const last = row.insertCell(1);
+                const  email = row.insertCell(2);
+                const button = row.insertCell(3)
+                first.innerHTML = firstnameVal;
+                last.innerHTML = lastnameVal;
+                email.innerHTML = emailVal;
+                button.innerHTML ="<button onclick=\"deleteRow(this)\">Delete</button>";
+            }
+            function deleteRow(button){
+                button.parentNode.parentNode.remove();//delete tr
+            }
+        </script>
+    </form>
